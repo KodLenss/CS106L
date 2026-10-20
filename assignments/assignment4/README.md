@@ -5,7 +5,9 @@
 
 # Assignment 4: Ispell
 
-Due Friday, May 16th at 11:59PM
+## Setting up C++
+
+Go find and follow the setup instructions in [Assignment Setup](../assignment-setup/README.md) to get your C++ compiler and autograder set up for this assignment.
 
 ## Overview
 
@@ -20,7 +22,7 @@ All of your code will go into `spellcheck.cpp`. Once you are done, you will have
 </p>
 
 > [!IMPORTANT]  
-> This assignment handout may look long, but there is actually not a lot of code that you need to write for this assignment! We have included a lot of extra details to make implementing this assignment (hopefully) more straightforward. Please let us know if anything confuses you (feel free to reach out on Ed/lecture/OH)! 
+> This assignment handout may look long, but there is actually not a lot of code that you need to write for this assignment! We have included a lot of extra details to make implementing this assignment (hopefully) more straightforward. Please let us know if anything confuses you (feel free to reach out on Ed/lecture/OH)! We also will be covering `tokenize` in class on Tuesday (05/05) to help you all start with this assignment!
 
 To download the starter code for this assignment, please see the instructions for [**Getting Started**](../README.md#getting-started) on the course assignments repository.
 
@@ -379,7 +381,8 @@ To fully test your spellchecker, try re-compiling and running the autograder:
 ./main
 ```
 
-If you pass all tests, you are ready to submit! Before you submit the assignment, please fill out this [short feedback form](https://forms.gle/Yn2BzGvuK237WFMc7). **Completion of the form is required to receive credit for the assignment.** After filling out the form, please upload the files to Paperless under the correct assignment heading.
+If you pass all tests, you are ready to submit! To submit the assignment:
+1. Send your code from `spellcheck.cpp` to `cs106l-aut2627-staff@lists.stanford.edu` from your Stanford email, with the email subject of `CS106L Assignment 4 Submission`.
 
 Your deliverable should be:
 

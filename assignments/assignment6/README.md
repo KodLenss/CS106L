@@ -1,6 +1,8 @@
 # Assignment 6: Explore Courses
 
-Due Friday, May 30th at 11:59PM
+## Setting up C++
+
+Go find and follow the setup instructions in [Assignment Setup](../assignment-setup/README.md) to get your C++ compiler and autograder set up for this assignment.
 
 ## Overview
 
@@ -165,7 +167,8 @@ It can help to **think about what the type of `output` is and work backwards fro
 
 ## 🚀 Submission Instructions
 
-Before you submit the assignment, please fill out this [short feedback form](https://forms.gle/cZGTbEQ8bp8awoA3A). **Completion of the form is required to receive credit for the assignment.** After filling out the form, please upload the files to Paperless under the correct assignment heading.
+If you pass all tests, you are ready to submit! To submit the assignment:
+1. Send your code from `main.cpp` to `cs106l-aut2627-staff@lists.stanford.edu` from your Stanford email, with the email subject of `CS106L Assignment 6 Submission`.
 
 Your deliverable should be:
 

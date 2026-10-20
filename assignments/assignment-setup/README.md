@@ -1,14 +1,12 @@
 <img src="docs/header.png" width="100%" />
 
-# Assignment 0: Setup!
-
-Due Friday, April 18th at 11:59PM
+# Assignment Setup!
 
 ## Overview
 
 Welcome to CS106L! This assignment will get you setup for the rest of the quarter so that setup for the rest of the assignments is simple and smooth. By the end of this assignment, you should be able to compile and run C++ files from VSCode and run the autograder, which you'll be doing for each of the remaining assignments!
 
-If you run into any issues during setup, please reach out to us on [EdStem](https://edstem.org/us/courses/77935/discussion) or come to our office hours!
+If you run into any issues during setup, please reach out to us on [EdStem](https://edstem.org/us/courses/81492/discussion) or come to our office hours!
 
 ## Part 1: Installing Python
 
@@ -42,21 +40,19 @@ These instructions are for Debian-based distributions, like Ubuntu. Tested on Ub
 
 1. Update the Ubuntu package lists by running
 
-    ```sh
-    sudo apt-get update
-    ```
-
+   ```sh
+   sudo apt-get update
+   ```
 2. Install Python:
 
-    ```sh
-    sudo apt-get install python3 python3-venv
-    ```
-
+   ```sh
+   sudo apt-get install python3 python3-venv
+   ```
 3. Restart your terminal and verify that the installation worked by running:
 
-    ```sh
-    python3 --version
-    ```
+   ```sh
+   python3 --version
+   ```
 
 ## Part 2: Setup VSCode and C++ Compiler
 
@@ -70,7 +66,7 @@ Go to [this link](https://code.visualstudio.com/docs/setup/mac)
 and download Visual Studio Code for Mac. Follow the instructions on this webpage under the
 section **Installation**.
 
-Inside VSCode, head to the extensions tab <img src="docs/vscode-extensions.png" display="inline" height="20px"></img> and search for **C/C++**. Click on the **C/C++** extension, and then click **Install**.
+Inside VSCode, head to the extensions tab  and search for **C/C++**. Click on the **C/C++** extension, and then click **Install**.
 
 Finally, open the command palette (<kbd>Cmd+Shift+P</kbd>), search for `Shell Command: Install 'code' command in PATH`, and select it. This will allow you to launch VSCode directly from the terminal by running the `code` command.
 
@@ -78,11 +74,11 @@ Finally, open the command palette (<kbd>Cmd+Shift+P</kbd>), search for `Shell Co
 
 #### Step Two: Installing a C++ Compiler
 
-1. Check if you have Homebrew by running 
+1. Check if you have Homebrew by running
 
-    ```sh
-    brew --version
-    ```
+   ```sh
+   brew --version
+   ```
 
    If you get something like
 
@@ -92,41 +88,37 @@ Finally, open the command palette (<kbd>Cmd+Shift+P</kbd>), search for `Shell Co
    ```
 
    then skip ahead to step 3. If you get anything else that looks suspicious, proceed to step 2!
-
 2. Run this command:
 
-    ```sh
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    ```
+   ```sh
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
 
-    which will download Homebrew🍺, a package manager for Mac. Woot woot.
-
+   which will download Homebrew🍺, a package manager for Mac. Woot woot.
 3. Run the following command:
 
-    ```sh
-    brew install gcc
-    ```
+   ```sh
+   brew install gcc
+   ```
 
-    which will install the GCC compiler on your machine.
+   which will install the GCC compiler on your machine.
+4. Make note of which GCC version Homebrew installs. In most cases, this will be `g++-14`.
+   By default, the `g++` command on Mac is an alias to the built-in `clang` compiler. We can fix this by running
 
-4. Make note of which GCC version Homebrew installs. In most cases, this will be `g++-14`. 
-    By default, the `g++` command on Mac is an alias to the built-in `clang` compiler. We can fix this by running 
-    
-    ```sh
-    echo 'export PATH="$(brew --prefix)/bin:$PATH"\nalias g++="g++-14"' >> ~/.zshrc
-    ```
-    
-    to make `g++` point to the version of GCC we just installed. Change `g++-14` in the above command to whichever version of GCC was installed.
+   ```sh
+   echo 'export PATH="$(brew --prefix)/bin:$PATH"\nalias g++="g++-14"' >> ~/.zshrc
+   ```
 
+   to make `g++` point to the version of GCC we just installed. Change `g++-14` in the above command to whichever version of GCC was installed.
 5. Restart your terminal and verify that everything worked by running the following command:
 
-    ```sh
-    g++ --version
-    ```
+   ```sh
+   g++ --version
+   ```
 
-> [!NOTE]  
+> [!NOTE]
 > If you are using VSCode to run your code, you may get an issue running this last command. **Make sure you are running a `zsh` terminal inside of VSCode,** as shown in the image below:
-> ![An image showing how to change the VSCode terminal to zsh](./docs/mac-zsh.png) 
+> ![An image showing how to change the VSCode terminal to zsh](./docs/mac-zsh.png)
 > You will need to do this any time you want to run `g++` for this class. **Alternatively, change VSCode's default terminal to zsh** by pressing <kbd>Cmd+Shift+P</kbd>, going to **Terminal: Select Default Profile**, and selecting **`zsh`**.
 
 ### Windows
@@ -137,19 +129,18 @@ Go to [this link](https://code.visualstudio.com/docs/setup/windows)
 and download Visual Studio Code for Windows. Follow the instructions on this webpage under the
 section **Installation**.
 
-Inside VSCode, head to the extensions tab <img src="docs/vscode-extensions.png" display="inline" height="20px"></img> and search for **C/C++**. Click on the **C/C++** extension, and then click **Install**.
+Inside VSCode, head to the extensions tab  and search for **C/C++**. Click on the **C/C++** extension, and then click **Install**.
 
 **🥳 At this point you should successfully have VSCode on your PC 👏**
 
 #### Step Two: Installing a C++ Compiler
 
 1. Follow the instructions at [this link](https://code.visualstudio.com/docs/cpp/config-mingw) under the section **Installing the MinGW-w64 toolchain.**
-
 2. After fully following the instructions under **Installing the MinGW-w64 toolchain** you should now be able to verify everything worked by running the following command:
 
-    ```sh
-    g++ --version
-    ```
+   ```sh
+   g++ --version
+   ```
 
 ### Linux
 
@@ -160,7 +151,7 @@ These instructions are for Debian-based distributions, like Ubuntu. Tested on Ub
 Go to [this link](https://code.visualstudio.com/docs/setup/linux)
 and download Visual Studio Code for Linux. Follow the instructions on this webpage under the section **Installation**.
 
-Inside VSCode, head to the extensions tab <img src="docs/vscode-extensions.png" display="inline" height="20px"></img> and search for **C/C++**. Click on the **C/C++** extension, and then click **Install**.
+Inside VSCode, head to the extensions tab  and search for **C/C++**. Click on the **C/C++** extension, and then click **Install**.
 
 Finally, open the command palette (<kbd>Ctrl+Shift+P</kbd>), search for `Shell Command: Install 'code' command in PATH`, and select it. This will allow you to launch VSCode directly from the terminal by running the `code` command.
 
@@ -170,27 +161,24 @@ Finally, open the command palette (<kbd>Ctrl+Shift+P</kbd>), search for `Shell C
 
 1. In a terminal, update the Ubuntu package lists by running
 
-    ```sh
-    sudo apt-get update
-    ```
+   ```sh
+   sudo apt-get update
+   ```
+2. Next install the `g++` compiler:
 
-2. Next install the `g++` compiler: 
+   ```sh
+   sudo apt-get install g++-10
+   ```
+3. By default, the system version of `g++` will be used. To change it to the version you just installed, you can configure Linux to use G++ version 10 or a higher version installed like so:
 
-    ```sh
-    sudo apt-get install g++-10
-    ```
+   ```sh
+   sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 10
+   ```
+4. Restart your terminal and verify that GCC was installed correctly. You must have a `g++` version of 10 or higher:
 
-3. By default, the system version of `g++` will be used. To change it to the version you just installed, you can configure Linux to use G++ version 10 or a higher version installed like so: 
-
-    ```sh
-    sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 10
-    ```
-
-4. Restart your terminal and verify that GCC was installed correctly. You must have a `g++` version of 10 or higher: 
-
-    ```sh
-    g++ --version
-    ```
+   ```sh
+   g++ --version
+   ```
 
 ## Part 3: Cloning the class code via Git!
 
@@ -204,23 +192,23 @@ If you see anything that looks off, [download and install Git from this page](ht
 
 ### Download the starter code
 
-Open VSCode, and then open a terminal (hit <kbd>Ctrl+\`</kbd> or go to **Terminal > New Terminal** at the top of the window) and run the following command:
+Open VSCode, and then open a terminal (hit <kbd>Ctrl+</kbd> or go to **Terminal > New Terminal** at the top of the window) and run the following command:
 
 ```sh
 git clone https://github.com/cs106l/cs106l-assignments.git
 ```
 
-which will download the starter code into a folder `cs106l-assignments`. 
+which will download the starter code into a folder `cs106l-assignments`.
 
 ### Opening a VSCode workspace
 
 When working on assignments in this class, we recommend you open up a VSCode workspace for the specific assignment folder you are working on. So if you now have a folder `cs106l-assignments`, you can first `cd` (change directory) into the correct folder:
 
 ```sh
-cd cs106l-assignments/assignment0
+cd cs106l-assignments/assignment-setup
 ```
 
-which changes your working directory to `assignment0`, and then you can open up a VSCode workspace dedicated to this folder:
+which changes your working directory to `assignment-setup`, and then you can open up a VSCode workspace dedicated to this folder:
 
 ```sh
 code .
@@ -240,7 +228,7 @@ You should now have the latest starter code!
 
 # Part 4: Testing your setup!
 
-Now we will have you compile your first C++ file and run the autograder. To run any C++ code, first you'll need to compile it. Open up a VSCode terminal (again, hit <kbd>Ctrl+\`</kbd> or go to **Terminal > New Terminal** at the top of the window). Then make sure that you are in the `assignment0/` directory and run:
+Now we will have you compile your first C++ file and run the autograder. To run any C++ code, first you'll need to compile it. Open up a VSCode terminal (again, hit <kbd>Ctrl+</kbd> or go to **Terminal > New Terminal** at the top of the window). Then make sure that you are in the `assignment-setup/` directory and run:
 
 ```sh
 g++ -std=c++23 main.cpp -o main
@@ -255,7 +243,6 @@ This **compiles** the C++ file `main.cpp` into an executable file called `main` 
 which will actually run the `main` function in `main.cpp`. This will execute your code and then run an autograder that will check that your installation is correct.
 
 > [!NOTE]
->
 > ### Note for Windows
 >
 > On Windows, you may need to compile your code using
@@ -269,10 +256,8 @@ which will actually run the `main` function in `main.cpp`. This will execute you
 > ```sh
 > ./main.exe
 > ```
-> 
 
 > [!NOTE]
->
 > ### Note for Mac
 >
 > You may get a compiler error when attempting to compile this code due to a missing `wchar.h` (or some similar file). If this happens, you may need to reinstall the Xcode command line tools on your machine by running the following commands:
@@ -284,10 +269,10 @@ which will actually run the `main` function in `main.cpp`. This will execute you
 >
 > Afterwards, you should be able to compile normally.
 
-# 🚀 Submission Instructions
+# 🚀 Once you're done...
 
 After compiling and running, if your autograder looks like this:
 
 ![An image showing a terminal window where the autograder has run with all tests passing](docs/autograder.png)
 
-then you have finished the assignment! Woot woot. To submit the assignment, please complete the feedback form [at this link](https://forms.gle/bC4xG9o1tsABsCug9)!
+then you have finished the assignment setup! Woot woot. You're now ready to move onto [Ascdsignment 1](assignment1/README.md)!

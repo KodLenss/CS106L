@@ -4,7 +4,9 @@
 
 # Assignment 3: Make a Class
 
-Due Friday, May 9th at 11:59PM
+## Setting up C++
+
+Go find and follow the setup instructions in [Assignment Setup](../assignment-setup/README.md) to get your C++ compiler and autograder set up for this assignment.
 
 ## Overview
 
@@ -109,7 +111,9 @@ Please answer the following questions inside `short_answer.txt`. We expect about
 
 ## 🚀 Submission Instructions
 
-Before you submit the assignment, please fill out this [short feedback form](https://forms.gle/BMHGeNPjotMS9njK7). **Completion of the form is required to receive credit for the assignment.** After filling out the form, please upload the files to Paperless under the correct assignment heading.
+To submit the assignment:
+1. Please compile your files `class.h`, `class.cpp`, `sandbox.cpp`, and `short_answer.txt` together into a `.zip`. 
+2. Send your `.zip` file to `cs106l-aut2627-staff@lists.stanford.edu` from your Stanford email, with the email subject of `CS106L Assignment 3 Submission`.
 
 Your deliverable should be:
 

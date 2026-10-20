@@ -1,18 +1,20 @@
-# Assignment 1: SimpleEnroll
+# Assignment 1: EnrollmentNavigator
 
-Due Friday, April 25th, at 11:59PM
+## Setting up C++
+
+Go find and follow the setup instructions in [Assignment Setup](../assignment-setup/README.md) to get your C++ compiler and autograder set up for this assignment.
 
 ## Overview
 
-It’s that time of the quarter again; time to use SimpleEnroll 🤗 Wootwoot.
+It’s that time of the quarter again; time to use EnrollmentNavigator 🤗 Wootwoot.
 One thing everyone realizes in their Stanford career at one point is that they
 have to eventually graduate — and so enrolling in classes becomes a strategic
 endeavor to maximize the XP towards graduation, while also being able to sleep
 more than 4 hours a night!
 
-In this hopefully short assignment, we’re going to use data from the
+In this hopefully short assignment, we’re going to use example data from the
 ExploreCourses API to figure out which CS classes on ExploreCourses are
-offered this year, and which are not! We’ll be taking advantage of streams, while also exercising initialization and references in C++. Lets jump in ʕ•́ᴥ•̀ʔっ
+offered, and which are not! We’ll be taking advantage of streams, while also exercising initialization and references in C++. Lets jump in ʕ•́ᴥ•̀ʔっ
 
 There are only two files you should need to care about:
 
@@ -109,7 +111,10 @@ After compiling and running, if your autograder looks like this:
 
 ![An image showing a terminal window where the autograder has run with all tests passing](docs/autograder.png)
 
-then you have finished the assignment! Woot woot. To submit the assignment, please complete the feedback form [at this link](https://forms.gle/9CBz5HRYRADP3RW28). Once you submit the form, a link to the submission page will show up in the form submission confirmation.
+then you have finished the assignment! Woot woot. 
+
+To submit the assignment:
+1. Send your code from `main.cpp` to `cs106l-aut2627-staff@lists.stanford.edu` from your Stanford email, with the email subject of `CS106L Assignment 1 Submission`.
 
 Your deliverable should be:
 
