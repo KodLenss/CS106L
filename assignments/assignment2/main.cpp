@@ -12,6 +12,7 @@
 #include <queue>
 #include <set>
 #include <string>
+#include <sstream>
 #include <unordered_set>
 
 std::string kYourName = "Zhao Enyang"; // Don't forget to change this!
@@ -28,12 +29,15 @@ std::string kYourName = "Zhao Enyang"; // Don't forget to change this!
  * to also change the corresponding functions in `utils.h`.
  */
 std::unordered_set<std::string> get_applicants(std::string filename) {
+
   std::unordered_set<std::string> list;
   std::string s;
   std::ifstream input(filename);
-  while(input >> s){
+
+  while(std::getline(input, s)){
     list.insert(s);
   }
+
   return list;
 }
 
@@ -45,22 +49,28 @@ std::unordered_set<std::string> get_applicants(std::string filename) {
  * @param students  The set of student names.
  * @return          A queue containing pointers to each matching name.
  */
-std::queue<const std::string*> find_matches(std::string name, std::set<std::string>& students) {
+std::queue<const std::string*> find_matches(std::string name, std::unordered_set<std::string>& students) {
+
   std::queue<const std::string*> q;
   std::istringstream MyName(name);
   char first_initial, second_initial;
   std::string s;
+
   MyName >> first_initial >> s >> second_initial >> s;
+
   for(auto it = students.begin(); it != students.end(); ++it){
+
     std::istringstream Name(*it);
     char st, nd;
+
     Name >> st >> s >> nd >> s;
+
     if(first_initial == st && second_initial == nd){
       q.push(&(*it));
     }
   }
   return q;
-}
+}  
 
 /**
  * Takes in a queue of pointers to possible matches and determines the one true match!
@@ -73,7 +83,15 @@ std::queue<const std::string*> find_matches(std::string name, std::set<std::stri
  *                Will return "NO MATCHES FOUND." if `matches` is empty.
  */
 std::string get_match(std::queue<const std::string*>& matches) {
-  // STUDENT TODO: Implement this function.
+
+  while(!matches.empty()){
+    const std::string* x = matches.front();
+    matches.pop(); 
+    if((*x)[1] == 'a'){
+      return *x;
+    }
+  }
+  return "NO MATCHES FOUND.";
 }
 
 /* #### Please don't remove this line! #### */

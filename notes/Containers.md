@@ -101,7 +101,6 @@ void std::vector<T>::push_front(const T& value) {
 >
 > 该原则保障了 C++ 在提供高表达力（抽象能力）的同时，仍能保持接近底层的性能效率，是 C++ 兼顾 “开发便捷性” 与 “运行高效性” 的重要设计基石。
 
-
 5. 在任意时刻，`std::vector` 都会管理**一块连续内存**，其大小足以容纳容器内的所有元素；当需要更多空间时，`std::vector` 会分配一块新内存（并释放旧内存）
 
 ```c++
@@ -111,7 +110,7 @@ v.push_back(5);
 
 // 向量（v）已耗尽空间，因此它会在堆（heap）上分配一块新内存，拷贝自身的所有元素，然后释放旧的内存块。
 // 通常情况下，向量在重新分配（内存）时会将其容量（capacity）翻倍，但具体行为依赖于编译器实现。
-v.push_back(6); 
+v.push_back(6);
 ```
 
 6. 双端队列 `std::deque` 是一种双端队列结构，允许在两端高效地进行插入和删除操作
@@ -123,8 +122,6 @@ v.push_back(6);
 ```c++
 std::deque<int> d { 4, 5, 6, 7, 8, 9 };
 ```
-
-
 
 ![image-20250917203221691](assets/image-20250917203221691.png)
 
@@ -175,7 +172,7 @@ d.push_front(-3);
 
 > 以本例来说，要获取 d [i]，可以先通过索引 (start + i) / 4（使用整数除法）找到 blocks 数组中的对应块，再通过 (start + i) % 4 访问该块内的具体元素。在实际实现中，start 和 finish（指针 / 索引）通常直接存储指向 deque 中首个和最后一个元素的指针，因此具体实现细节可能有所不同，但核心原理是一致的。
 >
-> 因此，通过索引访问 std::deque<T>的速度比 std::vector<T>稍慢，因为它需要经过两次指针访问（而非一次）才能找到目标元素。虽然 deque 比 vector 功能更强大 —— 它支持 vector 的所有操作，且能做更多 —— 但除非你的使用场景需要高效的前端插入 / 删除操作，否则 vector 仍应作为首选。
+> 因此，通过索引访问 std::deque<T></t>的速度比 std::vector<T></t>稍慢，因为它需要经过两次指针访问（而非一次）才能找到目标元素。虽然 deque 比 vector 功能更强大 —— 它支持 vector 的所有操作，且能做更多 —— 但除非你的使用场景需要高效的前端插入 / 删除操作，否则 vector 仍应作为首选。
 
 10. 关联式容器通过唯一键来组织元素，类似于 Python 中的字典和集合
 11. `std::map`（映射容器）将键映射到值，有时也被称为关联数组
@@ -313,7 +310,7 @@ for c in quote:
   if c not in counts:
     counts[c] = 0
   counts[c] += 1
-        
+      
 // 在 C++ 中，值的默认初始化省去了这种检查！
 ```
 
@@ -363,9 +360,7 @@ map.max_load_factor(2.0); 		// Set the max load factor
 ```
 
 21. `std::unordered_set`（无序集合容器）是没有值的 `std::unordered_map`（无序映射容器），不允许重复元素
-
 22. 要使用 `std::unordered_map<K, V>` 或 `std::unordered_set<T>`，类型  `K` 或类型 `T` 必须具备关联的哈希函数和相等性函数，可参考上文为 `map` 定义小于运算符的三种方式
-
 23. 何时使用 `unordered_map` 与 `map`？
 
 > - unordered_map 通常比 map 更快。
@@ -380,4 +375,3 @@ map.max_load_factor(2.0); 		// Set the max load factor
 其它容器：
 
 ![image-20250916162638940](assets/image-20250916162638940.png)
-
