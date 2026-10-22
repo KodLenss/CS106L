@@ -28,7 +28,13 @@ std::string kYourName = "STUDENT TODO"; // Don't forget to change this!
  * to also change the corresponding functions in `utils.h`.
  */
 std::set<std::string> get_applicants(std::string filename) {
-  // STUDENT TODO: Implement this function.
+  std::set<std::string> list;
+  std::string s;
+  std::fstream input(filename);
+  while(input >> s){
+    list.insert(s);
+  }
+  return list;
 }
 
 /**

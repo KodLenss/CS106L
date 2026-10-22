@@ -21,7 +21,7 @@ To download the starter code for this assignment, please see the instructions fo
 
 ## Running your code
 
-To run your code, first you'll need to compile it. Open up a terminal (if you are using VSCode, hit <kbd>Ctrl+\`</kbd> or go to **Terminal > New Terminal** at the top). Then make sure that you are in the `assignment2/` directory and run:
+To run your code, first you'll need to compile it. Open up a terminal (if you are using VSCode, hit <kbd>Ctrl+</kbd> or go to **Terminal > New Terminal** at the top). Then make sure that you are in the `assignment2/` directory and run:
 
 ```sh
 g++ -std=c++20 main.cpp -o main
@@ -38,7 +38,6 @@ which will actually run the `main` function in `main.cpp`.
 As you are following the instructions below, we recommend intermittently compiling/testing with the autograder as a way to make sure you're on the right track!
 
 > [!NOTE]
->
 > ### Note for Windows
 >
 > On Windows, you may need to compile your code using
@@ -59,12 +58,11 @@ Welcome to the Marriage Pact! Before you begin, we'll need to know your name. Pl
 
 ## Part 1: Get all applicants
 
-You’ve been waiting for days to get your Marriage Pact initials this year, and they’ve finally arrived in your inbox! This year, they’re implementing a new rule: your match MUST share your own initials to be eligible. However, even after talking about it for hours with your friends, you have no idea who your match could be! There are thousands of students on campus, and you can’t just go through the whole roster by hand to draft up a list of your potential soulmates. Fortunately enough for you, you’re in CS106L, and you remember that C++ has a pretty quick method of going through collected, similar information – containers!
+You’ve been waiting for days to get your Marriage Pact initials this year, and they’ve finally arrived in your inbox! This year, they’re implementing a new rule: your match MUST share your own initials to be eligible. However, even after talking about it for hours wi-s, and you can’t just go through the whole roster by hand to draft up a list of your potential soulmates. Fortunately enough for you, you’re in CS106L, and you remember that C++ has a pretty quick method of going through collected, similar information – containers!
 
 We’ve included a `.txt` file of all of the (fictional) students who signed up for The Marriage Pact this year (`students.txt`). Each line includes the first and last name of the student. You will first write the function `get_applicants`:
 
 > [!IMPORTANT]
->
 > ### `get_applicants`
 >
 > From the `.txt` file, parse all of the names into a set. Each line contained in the file named `filename` is a single applicant's name. In your implementation, you are free to choose between an ordered (`std::set`) and unordered set (`std::unordered_set`) as you wish! If you do choose to use an unordered set, please change the relevant function definitions!
@@ -72,7 +70,6 @@ We’ve included a `.txt` file of all of the (fictional) students who signed up 
 Additionally, please answer the following short answer question in `short_answer.txt`:
 
 > [!IMPORTANT]
->
 > ### `short_answer.txt`
 >
 > **Q1:** It is your choice to use either an ordered or unordered set. In a few sentences, what are some of the tradeoffs between the two? Additionally, please give an example (that has not been shown in lecture) of a valid hash function that could be used to hash student names for an unordered set.
@@ -87,7 +84,6 @@ Great detective work! Now that you’ve narrowed down your list of potential sou
 For this section, you will write the functions `find_matches` and `get_match`:
 
 > [!IMPORTANT]
->
 > ### `find_matches`
 >
 > From the set `students` (generated in the previous part), take all names that share initials with the parameter `name` and place pointers to them in a new `std::queue`.
@@ -99,7 +95,6 @@ For this section, you will write the functions `find_matches` and `get_match`:
 From here please implement the function `get_match` to find your “one true match.”:
 
 > [!IMPORTANT]
->
 > ### `get_match`
 >
 > Gets your “one true match” from the queue of all possible matches. This can be determined as you see fit; choose some method of acquiring one student from the queue, ideally something with a bit more thought than a single `pop()`, but it doesn’t have to be particularly complicated! Consider random values or other methods of selection.
@@ -109,7 +104,6 @@ From here please implement the function `get_match` to find your “one true mat
 Afterwards, answer the following question in `short_answer.txt`:
 
 > [!IMPORTANT]
->
 > ### `short_answer.txt`
 >
 > **Q2:** Note that we are saving pointers to names in the queue, not names themselves. Why might this be desired in this problem? What happens if the original set where the names are stored goes out of scope and the pointers are referenced?
@@ -117,7 +111,8 @@ Afterwards, answer the following question in `short_answer.txt`:
 ## 🚀 Submission Instructions
 
 To submit the assignment:
-1. Please compile your files `main.cpp` and `short_answer.txt` together into a `.zip`. 
+
+1. Please compile your files `main.cpp` and `short_answer.txt` together into a `.zip`.
 2. Send your `.zip` file to `cs106l-aut2627-staff@lists.stanford.edu` from your Stanford email, with the email subject of `CS106L Assignment 2 Submission`.
 
 Your deliverable should be:
